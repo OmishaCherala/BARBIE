@@ -1,0 +1,267 @@
+#include <iostream>
+using namespace std;
+
+void explanationFunction ();
+void tailFunction ();
+void meetFriendsFunction ();
+void visitChoiceFunction ();
+void festivalFunction ();
+
+int selectedTailOption;
+string userName;
+string selectedFriend;
+string selectedVisitOption;
+string userChoice;
+string festivalOption;
+
+int
+main ()
+{
+  cout << "ZUMA: Hi Barbie! My name is Zuma, your friendly dolphin! Welcome to Barbie in a Mermaid Tale!" 
+  << endl;
+  cout << endl;
+  cout << "ZUMA: What's your name?" << endl;
+  cin >> userName;
+  
+  cout << endl;
+  cout << "-----------------------------------------------------" << endl << endl;
+
+  cout << "ZUMA: Nice to meet you " << userName << "! I'm sorry we don't have much time to talk." << endl;
+  cout << "Oceana is in trouble, will you help save it?" << endl;
+  cout << "Yes" << endl;
+  cout << "No" << endl;
+  cin >> userChoice;
+  
+  cout << endl;
+  cout << "-----------------------------------------------------" << endl << endl;
+
+  if (userChoice == "yes" || userChoice == "Yes")
+	{
+	  cout << "Great!" << endl;
+	  cout << endl;
+	  explanationFunction ();
+	}
+  else if (userChoice == "no" || userChoice == "No")
+	{
+	  cout << "Thank you for playing!" << endl;
+	}
+  else
+	{
+	  cout << "I'm sorry! That's not an option, please try again!" << endl;
+	}
+
+  cout << "Choose your fake mermaid tail:" << endl;
+  cout << "1) Red Feather Tail" << endl;
+  cout << "2) Blue Glittery Tail" << endl;
+  cout << "3) Pink Chrome Tail" << endl;
+  cout << "4) Black Velvet Tail" << endl;
+  cout << "Enter a number: " << endl;
+  cin >> selectedTailOption;
+  
+  cout << endl;
+  cout << "-----------------------------------------------------" << endl << endl;
+
+  tailFunction ();
+
+  cout << "ZUMA: Nice! Now that we have picked out your outfit, let's introduce you to ";
+  cout << "your new friends." << endl << endl;
+  cout << "ZUMA: This is Kayla and Xylie! They are going to help us save your mother and Oceana!"
+  << endl << endl;
+  
+  cout << "Choose who you would like meet first: " << endl;
+  cout << "1) Kayla" << endl;
+  cout << "2) Xylie" << endl;
+  cout << "Enter a number: " << endl;
+  cin >> selectedFriend;
+  
+  cout << endl;
+  cout << "-----------------------------------------------------" << endl << endl;
+
+  meetFriendsFunction ();
+
+  cout << "ZUMA: I really don't want to rush the introductions, but we need to get going " << endl;
+  cout << "if we are going to save our world." << endl << endl;
+  cout << "ZUMA: If we want to figure out how to save Queen Calissa, I think we need to " << endl;
+  cout << "visit someone who knows your mother." << endl << endl;
+  
+  cout << "Who would you like to visit?" << endl;
+  cout << "1) The Destinies: Three mermaids with prophetic powers" << endl;
+  cout << "2) Your mother: Queen Calissa; who is in a dungeon" << endl;
+  cout << "3) The current queen: Queen Eris" << endl;
+  cout << "Enter a number:" << endl;
+  cin >> selectedVisitOption;
+  
+  cout << endl;
+  cout << "-----------------------------------------------------" << endl << endl;
+
+  visitChoiceFunction ();
+  
+  cout << "ZUMA: Good Job " << userName << "!" << endl << endl;
+  
+  cout << "ZUMA: I think before we continue, ";
+  cout << "I need to tell you more about Queen Eris's necklace." << endl << endl;
+  
+  cout << "ZUMA: In Oceana we have a substance called Merilla; ";
+  cout << "This material is essentially what powers Oceana. ";
+  cout << "To make it worse the only person that can create this substance is ";
+  cout << "the one that wears the necklace" << endl << endl;
+  
+  cout << "ZUMA: Like the destinies told us, the necklace is around Queen Eris's neck, " << endl << endl;
+  cout << "and the only way to get this necklace is to steal it without the Queen knowing." << endl;
+  
+  cout << "ZUMA: Luckily, Eris's festival that she throws every year is tomorrow, " << endl;
+  cout << "so if we can figure out a way to get in, we might have a chance in stealing the necklace." << endl;
+  
+  cout << "XYLIE: How do we get in though?" << endl << endl;
+  
+  cout << "KAYLA: Yeah, it's well-known that this festival has the best security ever." << endl << endl;
+  
+  cout << "YOU: Zuma! What do we do now?" << endl << endl;
+  
+  cout << "ZUMA: Don't worry girls, I have a few options on how we might get in." << endl << endl;
+  
+  cout << "How would you like to enter Eris's festival?" << endl;
+  cout << "1) Stand in the crowd, pretend to be so loud and crazy " << endl;
+  cout << "that the security steps away for a second in which Zuma will " << endl;
+  cout << "slide in and steal the necklace" << endl;
+  cout << "2) Become one of the dancers and get close to Eris, steal the necklace and lock the " << endl;
+  cout << "queen in a whirlpool" << endl;
+  cout << "Enter a number: " << endl;
+  cin >> festivalOption;
+  
+  cout << endl;
+  cout << "-----------------------------------------------------" << endl << endl;
+  
+  festivalFunction();
+  
+  cout << "ZUMA: Good Job Kayla and Xylie and especially you " << userName;
+  cout << ", you were so smart and got the necklace!" << endl << endl;
+}
+
+void
+explanationFunction ()
+{
+  cout << "ZUMA: So here is the issue, you are half-mermaid-half-human and your mother, " << endl;
+  cout << "the Queen of Oceana, Calissa, is currently locked in a dungeon " << endl;
+  cout << "because of her sister, your aunt, Eris." << endl << endl;
+  cout << "ZUMA: The key to saving her will be revealed later on, but first we need to " << endl;
+  cout << "fix your appearance so that you fit in with the other mermaids underwater!" << endl << endl;
+  
+  cout << "YOU: Hey! What's wrong with my appearance?" << endl << endl;
+  
+  cout << "ZUMA: Absolutely nothing! But... having legs, and not a tail, is something that" << endl;
+  cout << " will definitely get you noticed down there." << endl << endl;
+  
+  cout << "YOU: Okay! Let's do it!" << endl << endl;
+}
+
+void
+tailFunction ()
+{
+  if (selectedTailOption >= 1 && selectedTailOption <= 4)
+	{
+	  switch (selectedTailOption)
+		{
+		case 1:
+		  cout << "ZUMA: OMG red would look amazing on you!" << endl << endl;
+		  break;
+		case 2:
+		  cout << "ZUMA: You would rock that blue!" << endl << endl;
+		  break;
+		case 3:
+		  cout << "ZUMA: Pink! What a great selection!" << endl << endl;
+		  break;
+		case 4:
+		  cout << "ZUMA: Black is an amazing choice " << userName << endl
+			<< endl;
+		  break;
+		}
+	}
+  else
+	{
+	  cout << "I'm sorry! That's not an option, try again!" << endl << endl;
+	}
+}
+
+void
+meetFriendsFunction ()
+{
+  if (selectedFriend == "1")
+	{
+	  cout << "KAYLA: Hi! My name is Kayla, it's really nice to meet you " << userName 
+	  << "!" << endl << endl;
+	  cout << "YOU: Nice to meet you Kayla!" << endl << endl;
+	}
+  else if (selectedFriend == "2")
+	{
+	  cout << "XYLIE: Hey girl! My name is Xylie! I'm super excited to finally meet you!" << endl << endl;
+	  cout << "YOU: OMG, me too!" << endl << endl;
+	}
+  else
+	{
+	  cout << "I'm sorry! That's not an option, try again!" << endl << endl;
+	}
+}
+
+void
+visitChoiceFunction ()
+{
+  if (selectedVisitOption == "1")
+	{
+	  cout << "Good choice " << userName << "!" << endl << endl;
+	  cout << "Once you made your way to the destinies, they told you of the prophecy that " << endl;
+	  cout << "the key to saving everyone is in the necklace around Queen Eris 's neck." << endl << endl;
+	  cout << "DESTINY 1: Find the key that contains Merilla." << endl;
+	  cout << "DESTINY 2: It will guide to the right place." << endl;
+	  cout << "DESTINY 3: Don' t be afraid to dance when needed." << endl;
+	  cout << "DESTINY 1: Quick ! Make haste ! " << endl << endl;
+	}
+  else if (selectedVisitOption == "2")
+	{
+	  cout << "Oh no ! On your way to visit your mother, the security mermaids " << endl;
+	  cout << "caught you and locked you up for the rest of your life and Queen Eris " << endl;
+	  cout << "continued to reign until the end of time ! "<< endl << endl;
+	  cout << "GAME OVER " << endl << endl;
+	  cout << "Thank you so much for playing" << userName << " ! " << endl;
+	}
+  else if (selectedVisitOption == "3")
+	{
+	  cout << "OMG Queen Eris figured out your plan when you asked her a lot of questions about " << endl;
+	  cout << "Queen Calissa and locked you up for the rest of life." << endl;
+	  cout << "Unfortunately,Queen Eris reigned until the end of time! " << endl << endl;
+	  cout << "GAME OVER " << endl << endl;
+	  cout << "Thank you so much for playing" << userName << " ! " << endl;
+	}
+  else
+	{
+	  cout << "I 'm sorry! That' s not an option, try again ! " << endl << endl;
+	}
+}
+
+void festivalFunction() {
+    if (festivalOption >=1 && festivalOption <=2){
+        switch (festivalOption){
+            case 1 : 
+            cout << "No! The security was able to catch you and throw you " << endl;
+            cout << "and your friends in a dungeon before you could steal the necklace!" << endl << endl;
+            
+            cout << "Unfortunately,Queen Eris reigned until the end of time! " << endl << endl;
+            
+            cout << "GAME OVER " << endl << endl;
+            
+            cout << "Thank you so much for playing" << userName << " ! " << endl;
+            
+            break;
+            
+            case 2 :
+            cout << "Yes! You, Xylie, and Kayla all got dressed up and put on the most exravagant " << endl;
+            cout << "show which distracted Eris just in time for Zuma to steal the necklace. " << endl;
+            cout << "To keep Eris from causing any more trouble, you and the girls swam around "<< endl;
+            cout << "Eris to create a whirlpool thatswept her up and took her out of Oceana!" << endl << endl;
+	}
+        }
+    }
+    else{
+        cout << "I 'm sorry! That' s not an option, try again ! " << endl << endl;
+    }
+}
